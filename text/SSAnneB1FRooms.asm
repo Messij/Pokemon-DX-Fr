@@ -1,114 +1,67 @@
-_SSAnne10Text8::
-	text "MACHOKE: Gwoh!"
-	line "Goggoh!@"
-	text_end
+_SSAnne7RubText::
+	text "CAPITAINE: Blorf."
+	line "J'suis pas bien."
+	cont "Beurp..."
 
-_SSAnne10BattleText1::
-	text "You know what they"
-	line "say about sailors"
-	cont "and fighting!"
-	done
+	para "<PLAYER> masse"
+	line "le dos du"
+	cont "CAPITAINE!"
 
-_SSAnne10EndBattleText1::
-	text "Right!"
-	line "Good fight, mate!"
+	para "Scratch..."
+	line "Scratch...@@"
+
+_ReceivingHM01Text::
+	text "CAPITAINE: Merci"
+	line "moussaillon!"
+	cont "Ca va beaucoup"
+	cont "mieux..."
+
+	para "Mille sabords!"
+	line "Tu veux voir"
+	cont "la technique"
+	cont "COUPE?"
+
+	para "Je pourrais te la"
+	line "montrer, mais"
+	cont "j'suis malade."
+
+	para "Je sais!"
+	line "Prends ça!"
+
+	para "C'est la technique"
+	line "COUPE."
+	cont "Enseigne-la à"
+	cont "tes #MON!"
 	prompt
 
-_SSAnne10AfterBattleText1::
-	text "Haha! Want to be"
-	line "a sailor, mate?"
+_ReceivedHM01Text::
+	text "<PLAYER> obtient"
+	line "@"
+	text_ram wcf4b
+	text "!@@"
+
+_SSAnne7Text_61932::
+	text "CAPITAINE: Haaaa!"
+
+	para "Maintenant que"
+	line "je suis guéri, on"
+	cont "va lever l'ancre!"
 	done
 
-_SSAnne10BattleText2::
-	text "My sailor's pride"
-	line "is at stake!"
+_HM01NoRoomText::
+	text "Ha zut! Tu n'as"
+	line "plus de place"
+	cont "pour cet objet!"
 	done
 
-_SSAnne10EndBattleText2::
-	text "Your"
-	line "spirit sank me!"
-	prompt
-
-_SSAnne10AfterBattleText2::
-	text "Did you see the"
-	line "FISHING GURU in"
-	cont "VERMILION CITY?"
+_SSAnne7Text2::
+	text "Quoi?!?"
+	line "Il a mangé ça???"
 	done
 
-_SSAnne10BattleText3::
-	text "Us sailors have"
-	line "#MON too!"
-	done
-
-_SSAnne10EndBattleText3::
-	text "OK, "
-	line "you're not bad."
-	prompt
-
-_SSAnne10AfterBattleText3::
-	text "We caught all our"
-	line "#MON while"
-	cont "out at sea!"
-	done
-
-_SSAnne10BattleText4::
-	text "I like feisty"
-	line "kids like you!@"
-	text_end
-
-_SSAnne10EndBattleText4::
-	text "Argh!"
-	line "Lost it!"
-	prompt
-
-_SSAnne10AfterBattleText4::
-	text "Sea #MON live"
-	line "in deep water."
-	cont "You'll need a ROD!"
-	done
-
-_SSAnne10BattleText5::
-	text "Matey, you're"
-	line "walking the plank"
-	cont "if you lose!"
-	done
-
-_SSAnne10EndBattleText5::
-	text "Argh!"
-	line "Beaten by a kid!"
-	prompt
-
-_SSAnne10AfterBattleText5::
-	text "Jellyfish some-"
-	line "times drift into"
-	cont "the ship."
-	done
-
-_SSAnne10BattleText6::
-	text "Hello stranger!"
-	line "Stop and chat!"
-
-	para "All my #MON"
-	line "are from the sea!"
-	done
-
-_SSAnne10EndBattleText6::
-	text "Darn!"
-	line "I let that one"
-	cont "get away!"
-	prompt
-
-_SSAnne10AfterBattleText6::
-	text "I was going to"
-	line "make you my"
-	cont "assistant too!"
-	done
-
-_SSAnne10Text7::
-	text "My buddy, MACHOKE,"
-	line "is super strong!"
-
-	para "He has enough"
-	line "STRENGTH to move"
-	cont "big rocks!"
+_SSAnne7Text3::
+	text "Comment guérir"
+	line "le mal de mer..."
+	cont "Le CAPITAINE lit"
+	cont "ce manuel!"
 	done

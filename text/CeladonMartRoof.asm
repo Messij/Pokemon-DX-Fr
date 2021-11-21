@@ -1,152 +1,140 @@
 _CeladonMartRoofText_484ee::
-	text "Give her which"
-	line "drink?"
+	text "Quelle boisson"
+	line "lui offrir?"
 	done
 
 _CeladonMartRoofText_484f3::
-	text "Yay!"
+	text "Ouais ouais!"
 
-	para "FRESH WATER!"
+	para "DE L'EAU!"
 
-	para "Thank you!"
+	para "C'est cool!"
 
-	para "You can have this"
-	line "from me!@"
-	text_end
+	para "Tiens...c'est"
+	line "pour toi!@@"
 
 _CeladonMartRoofText_484f9::
-	text "<PLAYER> received"
+	text "<PLAYER> reçoit"
 	line "@"
 	text_ram wcf4b
 	text "!@"
 	text_end
 
 _CeladonMartRoofText_484fe::
-	text_start
+	text ""
 
 	para "@"
 	text_ram wcf4b
-	text " contains"
-	line "ICE BEAM!"
+	text ":"
+	line "LASER GLACE!"
 
-	para "It can freeze the"
-	line "target sometimes!@"
-	text_end
+	para "Cette attaque"
+	line "pourra geler"
+	cont "l'ennemi!@@"
 
 _CeladonMartRoofText_48504::
-	text "Yay!"
+	text "Ouaiiis!"
 
-	para "SODA POP!"
+	para "Du SODA COOL!"
 
-	para "Thank you!"
+	para "Merciiii!"
 
-	para "You can have this"
-	line "from me!@"
-	text_end
+	para "Tiens, prends ça!@@"
 
 _CeladonMartRoofText_4850a::
-	text "<PLAYER> received"
+	text "<PLAYER> reçoit"
 	line "@"
 	text_ram wcf4b
 	text "!@"
 	text_end
 
 _CeladonMartRoofText_4850f::
-	text_start
+	text ""
 
 	para "@"
 	text_ram wcf4b
-	text " contains"
-	line "ROCK SLIDE!"
+	text ":"
+	line "EBOULEMENT!"
 
-	para "It can spook the"
-	line "target sometimes!@"
-	text_end
+	para "Cette attaque"
+	line "peut faire peur"
+	cont "à l'ennemi!@@"
 
 _CeladonMartRoofText_48515::
-	text "Yay!"
+	text "Ouaiiis!"
 
-	para "LEMONADE!"
+	para "D'la LIMONADE!"
 
-	para "Thank you!"
+	para "Top top top!"
 
-	para "You can have this"
-	line "from me!@"
-	text_end
+	para "V'là pour toi!@@"
 
 _ReceivedTM49Text::
-	text "<PLAYER> received"
-	line "TM49!@"
-	text_end
+	text "<PLAYER> reçoit:"
+	line "CT49!@@"
 
 _CeladonMartRoofText_48520::
-	text_start
+	text ""
 
-	para "TM49 contains"
-	line "TRI ATTACK!@"
-	text_end
+	para "TM49..."
+	line "TRIPLATTAQUE!@@"
 
 _CeladonMartRoofText_48526::
-	text "You don't have"
-	line "space for this!@"
-	text_end
+	text "Plus de place!@@"
 
 _CeladonMartRoofText_4852c::
-	text "No thank you!"
-	line "I'm not thirsty"
-	cont "after all!@"
-	text_end
+	text "Heu..."
+	line "Non merci."
+	cont "A pu soif!@@"
 
 _CeladonMartRoofText1::
-	text "My sister is a"
-	line "trainer, believe"
-	cont "it or not."
+	text "Ma soeur est"
+	line "dresseur. Tu le"
+	cont "crois, ça?"
 
-	para "But, she's so"
-	line "immature, she"
-	cont "drives me nuts!"
+	para "Mais c'est une"
+	line "p'tite peste!"
+	cont "Elle m'agace!"
 	done
 
 _CeladonMartRoofText_48598::
-	text "I'm thirsty!"
-	line "I want something"
-	cont "to drink!"
+	text "N'ai soif!"
+	line "Ne veux boire!"
 	done
 
 _CeladonMartRoofText4::
-	text "I'm thirsty!"
-	line "I want something"
-	cont "to drink!"
-
-	para "Give her a drink?"
+	text "N'ai soif!"
+	line "Ne veux boire!"
 	done
 
 _CeladonMartRoofText6::
-	text "ROOFTOP SQUARE:"
-	line "VENDING MACHINES"
+	text "DERNIER ETAGE:"
+	line "DISTRIBUTEURS"
 	done
 
 _VendingMachineText1::
-	text "A vending machine!"
-	line "Here's the menu!"
+	text "Un distributeur!"
+	line "Que choisir?"
 	prompt
 
 _VendingMachineText4::
-	text "Oops, not enough"
-	line "money!"
+	text "Oups! Pas assez"
+	line "d'argent!"
 	done
 
 _VendingMachineText5::
+	text "Et hop!"
+	line "@"
 	text_ram wcf4b
-	text_start
-	line "popped out!"
+	text "!"
 	done
 
 _VendingMachineText6::
-	text "There's no more"
-	line "room for stuff!"
+	text "L'inventaire est"
+	line "plein!"
 	done
 
 _VendingMachineText7::
-	text "Not thirsty!"
+	text "Pas soif!"
 	done
+

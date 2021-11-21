@@ -1,105 +1,71 @@
-_SSAnne8Text8::
-	text "WIGGLYTUFF: Puup"
-	line "pupuu!@"
-	text_end
+_SSAnne2Text1::
+	text "Ce luxueux bateau"
+	line "accueille tous"
+	cont "les dresseurs!"
 
-_SSAnne8BattleText1::
-	text "I travel alone"
-	line "on my journeys!"
-
-	para "My #MON are my"
-	line "only friends!"
+	para "Dans chaque port"
+	line "nous organisons"
+	cont "une fête pour"
+	cont "les dresseurs!"
 	done
 
-_SSAnne8EndBattleText1::
-	text "My, my"
-	line "friends..."
+_SSAnneRivalBeforeBattleText::
+	text "<RIVAL>: Salut!"
+	line "<PLAYER>!"
+
+	para "Toi! Ici!"
+	line "Sans blague!"
+
+	para "<PLAYER>, as-tu"
+	line "vraiment été"
+	cont "invité?"
+
+	para "Où en es-tu avec"
+	line "ton #DEX?"
+
+	para "Moi, j'ai déjà"
+	line "attrapé 40"
+	cont "#MON! Minable!"
+
+	para "Y'en a partout!"
+
+	para "Tu n'as qu'à ramper"
+	line "dans les hautes"
+	cont "herbes!"
+	done
+
+_SSAnneRivalDefeatedText::
+	text "Mouaff!"
+
+	para "Au moins, tu"
+	line "t'occupes de tes"
+	cont "#MON!"
 	prompt
 
-_SSAnne8AfterBattleText1::
-	text "You should be"
-	line "nice to friends!"
-	done
+_SSAnneRivalWonText::
+	text "<PLAYER>! Tu as"
+	line "le mal de mer?"
 
-_SSAnne8BattleText2::
-	text "You pup! How dare"
-	line "you barge in!"
-	done
-
-_SSAnne8EndBattleText2::
-	text "Humph!"
-	line "You rude child!"
+	para "Tu devrais te"
+	line "mettre au frais!"
+	cont "Minable!"
 	prompt
 
-_SSAnne8AfterBattleText2::
-	text "I wish to be left"
-	line "alone! Get out!"
-	done
+_SSAnneRivalCaptainText::
+	text "<RIVAL>: Il y"
+	line "a le maître de la"
+	cont "technique COUPE"
+	cont "à bord."
 
-_SSAnne8BattleText3::
-	text "I love #MON!"
-	line "Do you?"
-	done
+	para "Mais ce n'est"
+	line "qu'un vieil homme"
+	cont "malade et sénile!"
 
-_SSAnne8EndBattleText3::
-	text "Wow! "
-	line "You're great!"
-	prompt
+	para "La technique"
+	line "COUPE est très"
+	cont "utile!"
 
-_SSAnne8AfterBattleText3::
-	text "Let me be your"
-	line "friend, OK?"
-
-	para "Then we can trade"
-	line "#MON!"
-	done
-
-_SSAnne8BattleText4::
-	text "I collected these"
-	line "#MON from all"
-	cont "around the world!"
-	done
-
-_SSAnne8EndBattleText4::
-	text "Oh no!"
-	line "I went around the"
-	cont "world for these!"
-	prompt
-
-_SSAnne8AfterBattleText4::
-	text "You hurt my poor"
-	line "worldly #MON!"
-
-	para "I demand that you"
-	line "heal them at a"
-	cont "#MON CENTER!"
-	done
-
-_SSAnne8Text5::
-	text "Waiter, I would"
-	line "like a cherry pie"
-	cont "please!"
-	done
-
-_SSAnne8Text6::
-	text "A cruise is so"
-	line "elegant yet cozy!"
-	done
-
-_SSAnne8Text7::
-	text "I always travel"
-	line "with WIGGLYTUFF!"
-	done
-
-_SSAnne8Text9::
-	text "We are cruising"
-	line "around the world."
-	done
-
-_SSAnne8Text11::
-	text "Ssh! I'm a GLOBAL"
-	line "POLICE agent!"
-
-	para "I'm on the trail"
-	line "of TEAM ROCKET!"
+	para "Tu devrais le"
+	line "rencontrer!"
+	cont "Salut! Minable!"
 	done

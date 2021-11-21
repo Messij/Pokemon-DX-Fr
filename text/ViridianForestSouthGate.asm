@@ -1,13 +1,22 @@
-_ViridianForestEntranceText1::
-	text "Are you going to"
-	line "VIRIDIAN FOREST?"
-	cont "Be careful, it's"
-	cont "a natural maze!"
+_ViridianForestExitText1::
+	text "De nombreux"
+	line "#MON vivent"
+	cont "uniquement dans"
+	cont "les forêts ou les"
+	cont "cavernes."
+
+	para "Cherche bien"
+	line "partout pour tous"
+	cont "les avoir!"
 	done
 
-_ViridianForestEntranceText2::
-	text "RATTATA may be"
-	line "small, but its"
-	cont "bite is wicked!"
-	cont "Did you get one?"
+_ViridianForestExitText2::
+	text "As-tu remarqué"
+	line "les buissons sur"
+	cont "la route?"
+
+	para "Une technique"
+	line "secrète de"
+	cont "#MON peut les"
+	cont "couper."
 	done
