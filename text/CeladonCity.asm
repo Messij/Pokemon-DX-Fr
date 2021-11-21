@@ -88,7 +88,8 @@ _CeladonCityText9::
 	done
 
 _CeladonCityText10::
-	text "TRAINER TIPS"
+	text "CONSEILS DE"
+	line "DRESSEUR"
 
 	para "PRECISION +"
 	line "augmente la"
@@ -123,7 +124,7 @@ _CeladonCityText13::
 	done
 
 _CeladonCityText14::
-	text "CELADON MANSION"
+	text "MANOIR CELADOPOLE"
 	done
 
 _CeladonCityText15::
@@ -134,7 +135,8 @@ _CeladonCityText15::
 	done
 
 _CeladonCityText16::
-	text "TRAINER TIPS"
+	text "CONSEILS DE"
+	line "DRESSEUR"
 
 	para "DEFENSE SPEC"
 	line "protège les"

@@ -1241,9 +1241,7 @@ _SubstituteBrokeText::
 	prompt
 
 _BuildingRageText::
-	text "La FRENESIE de"
-	line "<USER>"
-	cont "s'intensifie!"
+	text "La FRENESIE +"
 	done
 
 _MirrorMoveFailedText::

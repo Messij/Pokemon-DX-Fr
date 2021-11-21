@@ -193,8 +193,7 @@ charmap "y'", $DF
 	charmap "<MN>",      $e2
 	charmap "-",         $e3
 
-	charmap "'r",        $e4
-	charmap "'m",        $e5
+	charmap "+",        $e4
 
 	charmap "?",         $e6
 	charmap "!",         $e7
