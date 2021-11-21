@@ -107,7 +107,7 @@ rLCDC_DEFAULT EQU %11100011
 	dec a
 	ld [wUpdateSpritesEnabled], a
 
-	predef PlayIntro
+	;predef PlayIntro
 
 	call DisableLCD
 	call ClearVram
