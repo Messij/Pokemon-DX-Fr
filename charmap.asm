@@ -104,6 +104,7 @@
 	charmap "M",         $8c
 	charmap "N",         $8d
 	charmap "O",         $8e
+
 	charmap "P",         $8f
 	charmap "Q",         $90
 	charmap "R",         $91
@@ -115,7 +116,6 @@
 	charmap "X",         $97
 	charmap "Y",         $98
 	charmap "Z",         $99
-
 	charmap "(",         $9a
 	charmap ")",         $9b
 	charmap ":",         $9c
@@ -139,6 +139,7 @@
 	charmap "n",         $ad
 	charmap "o",         $ae
 	charmap "p",         $af
+
 	charmap "q",         $b0
 	charmap "r",         $b1
 	charmap "s",         $b2
@@ -149,13 +150,43 @@
 	charmap "x",         $b7
 	charmap "y",         $b8
 	charmap "z",         $b9
+charmap "à", $BA
+charmap "è", $BB
+charmap "é", $BC
+charmap "ù", $BD
+charmap "ß", $BE
+charmap "ç", $BF
 
-	charmap "é",         $ba
-	charmap "'d",        $bb
-	charmap "'l",        $bc
-	charmap "'s",        $bd
-	charmap "'t",        $be
-	charmap "'v",        $bf
+charmap "Ä", $C0
+charmap "Ö", $C1
+charmap "Ü", $C2
+charmap "ä", $C3
+charmap "ö", $C4
+charmap "ü", $C5
+charmap "ë", $C6
+charmap "ï", $C7
+charmap "â", $C8
+charmap "ô", $C9
+charmap "û", $CA
+charmap "ê", $CB
+charmap "î", $CC
+charmap "'d", $CD
+charmap "'l", $CE
+charmap "'t", $CF
+			  
+charmap "'v", $D0
+charmap "c'", $D4
+charmap "d'", $D5
+charmap "j'", $D6
+charmap "l'", $D7
+charmap "m'", $D8
+charmap "n'", $D9
+charmap "p'", $DA
+charmap "s'", $DB
+charmap "'s", $DC
+charmap "t'", $DD
+charmap "u'", $DE
+charmap "y'", $DF
 
 	charmap "'",         $e0
 	charmap "<PK>",      $e1
