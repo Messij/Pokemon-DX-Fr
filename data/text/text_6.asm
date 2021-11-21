@@ -1,231 +1,238 @@
 _ItemUseBallText00::
-	text "It dodged the"
-	line "thrown BALL!"
+	text "Il evite la BALL!"
 
-	para "This #MON"
-	line "can't be caught!"
+	para "Capture"
+	line "impossible!"
 	prompt
 
 _ItemUseBallText01::
-	text "You missed the"
+	text "Vous manquez le"
 	line "#MON!"
 	prompt
 
 _ItemUseBallText02::
-	text "Darn! The #MON"
-	line "broke free!"
+	text "Zut de flute! Il"
+	line "s'est libere!"
 	prompt
 
 _ItemUseBallText03::
-	text "Aww! It appeared"
-	line "to be caught! "
+	text "Mega-mince..."
+	line "Presque!"
 	prompt
 
 _ItemUseBallText04::
-	text "Shoot! It was so"
-	line "close too!"
+	text "Pas d'bol, hein?"
 	prompt
 
 _ItemUseBallText05::
-	text "All right!"
+	text "Top cool!"
 	line "@"
 	text_ram wEnemyMonNick
-	text " was"
-	cont "caught!@"
-	text_end
+	text " est"
+	cont "capture!@@"
 
 _ItemUseBallText07::
 	text_ram wBoxMonNicks
-	text " was"
-	line "transferred to"
-	cont "BILL's PC!"
+	text " est"
+	line "transfere au PC"
+	cont "de LEO!"
 	prompt
 
 _ItemUseBallText08::
 	text_ram wBoxMonNicks
-	text " was"
-	line "transferred to"
-	cont "someone's PC!"
+	text " est"
+	line "transfere au PC"
+	cont "inconnu!"
 	prompt
 
 _ItemUseBallText06::
-	text "New #DEX data"
-	line "will be added for"
-	cont "@"
+	text "Le profil de"
+	line "@"
 	text_ram wEnemyMonNick
-	text "!@"
+	text " est"
+	cont "transfere sur le"
+	cont "#DEX!@"
 	text_end
 
 _SurfingGotOnText::
-	text "<PLAYER> got on"
+	text "<PLAYER> monte sur"
 	line "@"
 	text_ram wcd6d
 	text "!"
 	prompt
 
 _SurfingNoPlaceToGetOffText::
-	text "There's no place"
-	line "to get off!"
+	text "Impossible de"
+	line "descendre!"
 	prompt
 
 _VitaminStatRoseText::
-	text_ram wcd6d
-	text "'s"
-	line "@"
 	text_ram wcf4b
-	text " rose."
+	text " de"
+	line "@"
+	text_ram wcd6d
+	text ""
+	cont "augmente."
 	prompt
 
 _VitaminNoEffectText::
-	text "It won't have any"
-	line "effect."
+	text "Ca ne marche pas."
 	prompt
 
 _ThrewBaitText::
-	text "<PLAYER> threw"
-	line "some BAIT."
+	text "<PLAYER> lance"
+	line "un APPAT."
 	done
 
 _ThrewRockText::
-	text "<PLAYER> threw a"
-	line "ROCK."
+	text "<PLAYER> lance"
+	line "un CAILLOU."
 	done
 
 _PlayedFluteNoEffectText::
-	text "Played the #"
-	line "FLUTE."
+	text "Vous jouez de la"
+	line "#FLUTE."
 
-	para "Now, that's a"
-	line "catchy tune!"
+	para "Super!!! Ca c'est"
+	line "d'la zique!"
 	prompt
 
 _FluteWokeUpText::
-	text "All sleeping"
-	line "#MON woke up."
+	text "Tous les #MON"
+	line "endormis se"
+	cont "reveillent."
 	prompt
 
 _PlayedFluteHadEffectText::
-	text "<PLAYER> played the"
-	line "# FLUTE.@"
+	text "<PLAYER> joue de"
+	line "la #FLUTE.@"
 	text_end
 
 _CoinCaseNumCoinsText::
-	text "Coins"
+	text "Jetons"
 	line "@"
 	text_bcd wPlayerCoins, 2 | LEADING_ZEROES | LEFT_ALIGN
 	text " "
 	prompt
 
 _ItemfinderFoundItemText::
-	text "Yes! ITEMFINDER"
-	line "indicates there's"
-	cont "an item nearby."
+	text "Ouais!!!!"
+	line "Le CHERCH'OBJET"
+	cont "signale un objet"
+	cont "dans l'coin!"
 	prompt
 
 _ItemfinderFoundNothingText::
-	text "Nope! ITEMFINDER"
-	line "isn't responding."
+	text "Non..."
+	line "Le CHERCH'OBJET"
+	cont "ne signale rien."
 	prompt
 
 _RaisePPWhichTechniqueText::
-	text "Raise PP of which"
-	line "technique?"
+	text "Monter les PP de"
+	line "quelle attaque?"
 	done
 
 _RestorePPWhichTechniqueText::
-	text "Restore PP of"
-	line "which technique?"
+	text "Remplir les PP de"
+	line "quelle attaque?"
 	done
 
 _PPMaxedOutText::
+	text "PP de @"
 	text_ram wcf4b
-	text "'s PP"
-	line "is maxed out."
+	text ""
+	line "sont au max."
 	prompt
 
 _PPIncreasedText::
+	text "PP de @"
 	text_ram wcf4b
-	text "'s PP"
-	line "increased."
+	text ""
+	line "augmentes."
 	prompt
 
 _PPRestoredText::
-	text "PP was restored."
+	text "PP restaures."
 	prompt
 
 _BootedUpTMText::
-	text "Booted up a TM!"
+	text "CT enclenchee!"
 	prompt
 
 _BootedUpHMText::
-	text "Booted up an HM!"
+	text "CS enclenchee!"
 	prompt
 
 _TeachMachineMoveText::
-	text "It contained"
+	text "Elle contient:"
 	line "@"
 	text_ram wcf4b
+
 	text "!"
 
-	para "Teach @"
+	para "Apprendre"
+	line "@"
 	text_ram wcf4b
-	text_start
-	line "to a #MON?"
+	text " a"
+	cont "un #MON?"
 	done
 
 _MonCannotLearnMachineMoveText::
-	text_ram wcd6d
-	text " is not"
-	line "compatible with"
-	cont "@"
 	text_ram wcf4b
+	text " est"
+	line "incompatible avec"
+	cont "@"
+	text_ram wcd6d
+
 	text "."
 
-	para "It can't learn"
+	para "Instruction de"
 	line "@"
 	text_ram wcf4b
-	text "."
+
+	text ""
+	cont "impossible."
 	prompt
 
 _ItemUseNotTimeText::
-	text "OAK: <PLAYER>!"
-	line "This isn't the"
-	cont "time to use that! "
+	text "CHEN: Allo?"
+	line "<PLAYER>? C'est"
+	cont "pas l'moment de"
+	cont "faire ca!"
 	prompt
 
 _ItemUseNotYoursToUseText::
-	text "This isn't yours"
-	line "to use!"
+	text "C'est pas a toi!"
 	prompt
 
 _ItemUseNoEffectText::
-	text "It won't have any"
-	line "effect."
+	text "Sans effet."
 	prompt
 
 _ThrowBallAtTrainerMonText1::
-	text "The trainer"
-	line "blocked the BALL!"
+	text "Le dresseur devie"
+	line "la BALL!"
 	prompt
 
 _ThrowBallAtTrainerMonText2::
-	text "Don't be a thief!"
+	text "Voler, c'est mal!"
 	prompt
 
 _NoCyclingAllowedHereText::
-	text "No cycling"
-	next "allowed here."
+	text "Interdit de"
+	next "pedaler ici!!!"
 	prompt
 
 _NoSurfingHereText::
-	text "No SURFing on"
+	text "Pas de SURF sur"
 	line "@"
 	text_ram wcd6d
-	text " here!"
+	text " ici!"
 	prompt
 
 _BoxFullCannotThrowBallText::
-	text "The #MON BOX"
-	line "is full! Can't"
-	cont "use that item!"
+	text "La BOITE #MON"
+	line "est pleine! Objet"
+	cont "inutilisable!"
 	prompt

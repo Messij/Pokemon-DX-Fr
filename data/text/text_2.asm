@@ -1,59 +1,60 @@
 _AIBattleWithdrawText::
 	text_ram wTrainerName
-	text " with-"
-	line "drew @"
+	text ""
+	line "rappelle..."
+	cont "@"
 	text_ram wEnemyMonNick
 	text "!"
 	prompt
 
 _AIBattleUseItemText::
 	text_ram wTrainerName
-	text_start
-	line "used @"
+	text " uti-"
+	line "lise @"
 	text_ram wcd6d
-	text_start
-	cont "on @"
+	text ""
+	cont "sur @"
 	text_ram wEnemyMonNick
 	text "!"
 	prompt
 
 _TradeWentToText::
 	text_ram wcf4b
-	text " went"
-	line "to @"
+	text " va"
+	line "à @"
 	text_ram wLinkEnemyTrainerName
 	text "."
 	done
 
 _TradeForText::
-	text "For <PLAYER>'s"
-	line "@"
+	text "Contre @"
 	text_ram wcf4b
-	text ","
+	text ""
+	line "de <PLAYER>,"
 	done
 
 _TradeSendsText::
 	text_ram wLinkEnemyTrainerName
-	text " sends"
-	line "@"
+	text ""
+	line "donne @"
 	text_ram wcd6d
 	text "."
 	done
 
 _TradeWavesFarewellText::
 	text_ram wLinkEnemyTrainerName
-	text " waves"
-	line "farewell as"
+	text ":"
+	line "Au revoir,"
 	done
 
 _TradeTransferredText::
 	text_ram wcd6d
-	text " is"
-	line "transferred."
+	text "!"
+	line "(sniff sniff)"
 	done
 
 _TradeTakeCareText::
-	text "Take good care of"
+	text "Prends soin de"
 	line "@"
 	text_ram wcd6d
 	text "."
@@ -61,1037 +62,1086 @@ _TradeTakeCareText::
 
 _TradeWillTradeText::
 	text_ram wLinkEnemyTrainerName
-	text " will"
-	line "trade @"
+	text ""
+	line "offre @"
 	text_ram wcd6d
 	text_start
 	done
 
 _TradeforText::
-	text "for <PLAYER>'s"
-	line "@"
+	text "Contre @"
 	text_ram wcf4b
-	text "."
+	text ""
+	line "de <PLAYER>."
 	done
 
 _PlaySlotMachineText::
-	text "A slot machine!"
-	line "Want to play?"
+	text "Une machine à"
+	line "sous! On joue?"
 	done
 
 _OutOfCoinsSlotMachineText::
-	text "Darn!"
-	line "Ran out of coins!"
+	text "Zut de flûte!"
+	line "Pas de jetons!"
 	done
 
 _BetHowManySlotMachineText::
-	text "Bet how many"
-	line "coins?"
+	text "Combien de"
+	line "jetons?"
 	done
 
 _StartSlotMachineText::
-	text "Start!"
+	text "C'est parti!"
 	done
 
 _NotEnoughCoinsSlotMachineText::
-	text "Not enough"
-	line "coins!"
+	text "Pas assez de"
+	line "jetons!"
 	prompt
 
 _OneMoreGoSlotMachineText::
-	text "One more "
-	line "go?"
+	text "Encore une"
+	line "fois?"
 	done
 
 _LinedUpText::
-	text " lined up!"
-	line "Scored @"
+	text " en ligne!"
+	line "@"
 	text_ram wcf4b
-	text " coins!"
+	text " jetons!"
 	done
 
 _NotThisTimeText::
-	text "Not this time!"
+	text "Oups. Perdu!"
 	prompt
 
 _YeahText::
-	text "Yeah!@"
+	text "Ouaiiiis!@"
 	text_end
 
 _DexSeenOwnedText::
-	text "#DEX   Seen:@"
+	text "#DEX   Vus:@"
 	text_decimal wDexRatingNumMonsSeen, 1, 3
 	text_start
-	line "         Owned:@"
+	line "         Pris:@"
 	text_decimal wDexRatingNumMonsOwned, 1, 3
 	text_end
+	done
 
 _DexRatingText::
-	text "#DEX Rating<COLON>"
+	text "Eval. #DEX", $6d
 	done
 
 _GymStatueText1::
+	text "ARENE #MON"
+	line "de @"
 	text_ram wGymCityName
 	text_start
-	line "#MON GYM"
-	cont "LEADER: @"
+	cont "CHAMPION:"
+	cont "@"
 	text_ram wGymLeaderName
 	text_start
 
-	para "WINNING TRAINERS:"
+	para "VAINQUEURS:"
 	line "<RIVAL>"
 	done
 
 _GymStatueText2::
+	text "ARENE #MON"
+	line "de @"
 	text_ram wGymCityName
-	text_start
-	line "#MON GYM"
-	cont "LEADER: @"
+	text ""
+	cont "CHAMPION:"
+	cont "@"
 	text_ram wGymLeaderName
-	text_start
+	text ""
 
-	para "WINNING TRAINERS:"
+	para "VAINQUEURS:"
 	line "<RIVAL>"
 	cont "<PLAYER>"
 	done
 
 _ViridianCityPokecenterGuyText::
-	text "#MON CENTERs"
-	line "heal your tired,"
-	cont "hurt or fainted"
-	cont "#MON!"
+	text "Les CENTRES"
+	line "#MON soignent"
+	cont "tous les #MON"
+	cont "blessés ou K.O.!"
 	done
 
 _PewterCityPokecenterGuyText::
-	text "Yawn!"
+	text "(Baille)!"
 
-	para "When JIGGLYPUFF"
-	line "sings, #MON"
-	cont "get drowsy..."
+	para "Lorsque RONDOUDOU"
+	line "chante, tous les"
+	cont "#MON piquent"
+	cont "du nez..."
 
-	para "...Me too..."
-	line "Snore..."
+	para "...Moi aussi..."
+	line "(Pionce)..."
 	done
 
 _CeruleanPokecenterGuyText::
-	text "BILL has lots of"
-	line "#MON!"
+	text "LEO a une sacrée"
+	line "collection de"
+	cont "#MON!"
 
-	para "He collects rare"
-	line "ones too!"
+	para "Et des rares, en"
+	line "plus..."
 	done
 
 _LavenderPokecenterGuyText::
-	text "CUBONEs wear"
-	line "skulls, right?"
+	text "Les OSSELAIT"
+	line "portent un crâne,"
+	cont "non?"
 
-	para "People will pay a"
-	line "lot for one!"
+	para "Certains seraient"
+	line "prêts à en payer"
+	cont "le prix fort!"
 	done
 
 _MtMoonPokecenterBenchGuyText::
-	text "If you have too"
-	line "many #MON, you"
-	cont "should store them"
-	cont "via PC!"
+	text "Tu devrais ranger"
+	line "tes #MON en"
+	cont "trop via un PC!"
 	done
 
 _RockTunnelPokecenterGuyText::
-	text "I heard that"
-	line "GHOSTs haunt"
-	cont "LAVENDER TOWN!"
+	text "On m'a dit qu'il"
+	line "y a des SPECTRES"
+	cont "à LAVANVILLE!"
 	done
 
 _UnusedBenchGuyText1::
-	text "I wish I could"
-	line "catch #MON."
+	text "Moi aussi j'veux"
+	line "capturer un"
+	cont "#MON."
 	done
 
 _UnusedBenchGuyText2::
-	text "I'm tired from"
-	line "all the fun..."
+	text "La fatigue..."
+	cont "Doucement..."
+	cont "Me gagne..."
 	done
 
 _UnusedBenchGuyText3::
-	text "SILPH's manager"
-	line "is hiding in the"
-	cont "SAFARI ZONE."
+	text "Le patron de la"
+	line "SYLPHE se cache"
+	cont "dans le PARC"
+	cont "SAFARI."
 	done
 
 _VermilionPokecenterGuyText::
-	text "It is true that a"
-	line "higher level"
-	cont "#MON will be"
-	cont "more powerful..."
+	text "C'est vrai qu'un"
+	line "#MON de haut"
+	cont "niveau est très"
+	cont "puissant..."
 
-	para "But, all #MON"
-	line "will have weak"
-	cont "points against"
-	cont "specific types."
+	para "Mais tout #MON"
+	line "est vulnérable"
+	cont "face à un certain"
+	cont "élément."
 
-	para "So, there is no"
-	line "universally"
-	cont "strong #MON."
+	para "Il n'y a donc pas"
+	line "de #MON de"
+	cont "la mort qui tue."
 	done
 
 _CeladonCityPokecenterGuyText::
-	text "If I had a BIKE,"
-	line "I would go to"
-	cont "CYCLING ROAD!"
+	text "Si j'avais une"
+	line "BICYCLETTE,"
+	cont "j'irais sur la"
+	cont "PISTE CYCLABLE!"
 	done
 
 _FuchsiaCityPokecenterGuyText::
-	text "If you're studying "
-	line "#MON, visit"
-	cont "the SAFARI ZONE."
+	text "LE PARC SAFARI"
+	line "regorge de"
+	cont "#MON."
 
-	para "It has all sorts"
-	line "of rare #MON."
+	para "On y trouve aussi"
+	line "de très rares!"
 	done
 
 _CinnabarPokecenterGuyText::
-	text "#MON can still"
-	line "learn techniques"
-	cont "after canceling"
-	cont "evolution."
+	text "Les #MON"
+	line "peuvent apprendre"
+	cont "des techniques"
+	cont "même après avoir"
+	cont "annulé une"
+	cont "évolution."
 
-	para "Evolution can wait"
-	line "until new moves"
-	cont "have been learned."
+	para "On peut lancer"
+	line "une évolution"
+	cont "après avoir"
+	cont "appris une"
+	cont "technique!!!"
 	done
 
 _SaffronCityPokecenterGuyText1::
-	text "It would be great"
-	line "if the ELITE FOUR"
-	cont "came and stomped"
-	cont "TEAM ROCKET!"
+	text "Pourquoi le"
+	line "CONSEIL des 4 ne"
+	cont "vient pas casser"
+	cont "les dents de la"
+	cont "TEAM ROCKET?"
 	done
 
 _SaffronCityPokecenterGuyText2::
-	text "TEAM ROCKET took"
-	line "off! We can go"
-	cont "out safely again!"
-	cont "That's great!"
+	text "La TEAM ROCKET"
+	line "est partie! Alors"
+	cont "c'est la fête!"
+	cont "Youpi!"
 	done
 
 _CeladonCityHotelText::
-	text "My sis brought me"
-	line "on this vacation!"
+	text "Je suis en"
+	line "vacances avec ma"
+	cont "soeur... "
+	cont "Ca craint à mort!"
 	done
 
 _BookcaseText::
-	text "Crammed full of"
-	line "#MON books!"
+	text "Des bouquins sur"
+	line "les #MON!"
 	done
 
 _NewBicycleText::
-	text "A shiny new"
-	line "BICYCLE!"
+	text "Une BICYCLETTE"
+	line "toute neuve! Top!"
 	done
 
 _PushStartText::
-	text "Push START to"
-	line "open the MENU!"
+	text "START et...paf!"
+	line "V'là le MENU!"
 	done
 
 _SaveOptionText::
-	text "The SAVE option is"
-	line "on the MENU"
-	cont "screen."
+	text "L'option SAUVER"
+	line "est sur l'écran"
+	cont "du MENU."
 	done
 
 _StrengthsAndWeaknessesText::
-	text "All #MON types"
-	line "have strong and"
-	cont "weak points"
-	cont "against others."
+	text "Tous les #MON"
+	line "ont des points"
+	cont "faibles! Ils sont"
+	cont "également tous"
+	cont "puissants face"
+	cont "à un certain"
+	cont "élément."
 	done
 
 _TimesUpText::
-	text "PA: Ding-dong!"
+	text "Haut-parleur: Hé!"
 
-	para "Time's up!"
+	para "C'est fini!"
 	prompt
 
 _GameOverText::
-	text "PA: Your SAFARI"
-	line "GAME is over!"
+	text "Haut-parleur:"
+	line "Le SAFARI est"
+	cont "terminé!"
 	done
 
 _CinnabarGymQuizIntroText::
-	text "#MON Quiz!"
+	text "Quiz #MON!"
 
-	para "Get it right and"
-	line "the door opens to"
-	cont "the next room!"
+	para "Une bonne réponse"
+	line "ouvrira la porte!"
 
-	para "Get it wrong and"
-	line "face a trainer!"
+	para "Une erreur et"
+	line "c'est la guerre!"
 
-	para "If you want to"
-	line "conserve your"
-	cont "#MON for the"
-	cont "GYM LEADER..."
+	para "Pour préserver"
+	line "une équipe avant"
+	cont "d'affronter le"
+	cont "CHAMPION..."
 
-	para "Then get it right!"
-	line "Here we go!"
+	para "Mieux vaut éviter"
+	line "les erreurs!"
 	prompt
 
 _CinnabarQuizQuestionsText1::
-	text "CATERPIE evolves"
-	line "into BUTTERFREE?"
+	text "CHENIPAN évolue"
+	line "en PAPILUSION?"
 	done
 
 _CinnabarQuizQuestionsText2::
-	text "There are 9"
-	line "certified #MON"
-	cont "LEAGUE BADGEs?"
+	text "Il existe 9"
+	line "BADGES #MON?"
 	done
 
 _CinnabarQuizQuestionsText3::
-	text "POLIWAG evolves 3"
-	line "times?"
+	text "PTITARD évolue"
+	line "3 fois?"
 	done
 
 _CinnabarQuizQuestionsText4::
-	text "Are thunder moves"
-	line "effective against"
-	cont "ground element-"
-	cont "type #MON?"
+	text "La foudre est"
+	line "efficace contre"
+	cont "les #MON du"
+	cont "sol?"
 	done
 
 _CinnabarQuizQuestionsText5::
-	text "#MON of the"
-	line "same kind and"
-	cont "level are not"
-	cont "identical?"
+	text "Les #MON du"
+	line "même type et du"
+	cont "même niveau sont"
+	cont "différents?"
 	done
 
 _CinnabarQuizQuestionsText6::
-	text "TM28 contains"
-	line "TOMBSTONER?"
+	text "CT28 contient"
+	line "FOSSE?"
 	done
 
 _CinnabarGymQuizCorrectText::
-	text "You're absolutely"
-	line "correct!"
+	text "Bonne réponse!"
 
-	para "Go on through!@"
-	text_end
+	para "En avant!@@"
 
 _CinnabarGymQuizIncorrectText::
-	text "Sorry! Bad call!"
+	text "N'importe quoi!"
 	prompt
 
 _MagazinesText::
-	text "#MON magazines!"
+	text "Des magazines"
+	line "#MON!"
 
-	para "#MON notebooks!"
+	para "Des cahiers"
+	line "#MON!"
 
-	para "#MON graphs!"
+	para "Des dessins"
+	line "#MON!"
 	done
 
 _BillsHouseMonitorText::
-	text "TELEPORTER is"
-	line "displayed on the"
-	cont "PC monitor."
+	text "Un TELEPORTEUR"
+	line "sur le moniteur!"
 	done
 
 _BillsHouseInitiatedText::
-	text "<PLAYER> initiated"
-	line "TELEPORTER's Cell"
-	cont "Separator!@"
+	text "<PLAYER> enclenche"
+	line "le TELEPORTEUR!@"
 	text_end
 
 _BillsHousePokemonListText1::
-	text "BILL's favorite"
-	line "#MON list!"
+	text "La liste des"
+	line "#MON favoris"
+	cont "de LEO!"
 	prompt
 
 _BillsHousePokemonListText2::
-	text "Which #MON do"
-	line "you want to see?"
+	text "Quel #MON"
+	line "voulez-vous voir?"
 	done
 
 _OakLabEmailText::
-	text "There's an e-mail"
-	line "message here!"
+	text "Il y a un e-mail!"
 
 	para "..."
 
-	para "Calling all"
-	line "#MON trainers!"
+	para "Avis à tous les"
+	line "dresseurs de"
+	cont "#MON!"
 
-	para "The elite trainers"
-	line "of #MON LEAGUE"
-	cont "are ready to take"
-	cont "on all comers!"
+	para "Le CONSEIL des 4"
+	line "est prêt à punir"
+	cont "tout concurrent!"
 
-	para "Bring your best"
-	line "#MON and see"
-	cont "how you rate as a"
-	cont "trainer!"
+	para "Présentez vos"
+	line "meilleurs #MON"
+	cont "et découvrez"
+	cont "votre niveau"
+	cont "en tant que"
+	cont "dresseur!"
 
-	para "#MON LEAGUE HQ"
-	line "INDIGO PLATEAU"
+	para "LIGUE #MON,"
+	line "PLATEAU INDIGO"
 
-	para "PS: PROF.OAK,"
-	line "please visit us!"
-	cont "..."
+	para "PS: PROF. CHEN,"
+	line "votre visite est"
+	cont "attendue..."
 	done
 
 _GameCornerCoinCaseText::
-	text "A COIN CASE is"
-	line "required!"
+	text "Vous n'avez pas"
+	line "de BOITE JETON!"
 	done
 
 _GameCornerNoCoinsText::
-	text "You don't have"
-	line "any coins!"
+	text "Vous n'avez pas"
+	line "de jetons!"
 	done
 
 _GameCornerOutOfOrderText::
-	text "OUT OF ORDER"
-	line "This is broken."
+	text "EN PANNE"
+	line "Machine cassée."
 	done
 
 _GameCornerOutToLunchText::
-	text "OUT TO LUNCH"
-	line "This is reserved."
+	text "PARTI MANGER"
+	line "Machine réservée."
 	done
 
 _GameCornerSomeonesKeysText::
-	text "Someone's keys!"
-	line "They'll be back."
+	text "Des clés!"
+	line "Bah? C'est à qui?"
 	done
 
 _JustAMomentText::
-	text "Just a moment."
+	text "Patientez SVP."
 	done
 
 TMNotebookText::
-	text "It's a pamphlet"
-	line "on TMs."
+	text "C'est un rapport"
+	line "sur les CT."
 
 	para "..."
 
-	para "There are 50 TMs"
-	line "in all."
+	para "Il existe en tout"
+	line "50 CT (Capsule"
+	cont "Technique)."
 
-	para "There are also 5"
-	line "HMs that can be"
-	cont "used repeatedly."
+	para "5 CS (Capsule"
+	line "Secrète) sont à"
+	cont "utiliser à"
+	cont "l'infini."
 
-	para "SILPH CO.@"
-	text_end
+	para "SYLPHE SARL@@"
 
 _TurnPageText::
-	text "Turn the page?"
+	text "Tourner la page?"
 	done
 
 _ViridianSchoolNotebookText5::
-	text "GIRL: Hey! Don't"
-	line "look at my notes!@"
-	text_end
+	text "FILLE: Hé! Ne lis"
+	line "pas mon journal!@@"
 
 _ViridianSchoolNotebookText1::
-	text "Looked at the"
-	line "notebook!"
+	text "Vous examinez le"
+	line "journal!"
 
-	para "First page..."
+	para "Première page..."
 
-	para "# BALLs are"
-	line "used to catch"
+	para "Les # BALL"
+	line "peuvent capturer"
+	cont "les #MON."
+
+	para "Jusqu'à 6"
+	line "#MON sont"
+	cont "transportables."
+
+	para "Les personnes"
+	line "s'occupant des"
+	cont "#MON sont"
+	cont "des dresseurs de"
 	cont "#MON."
-
-	para "Up to 6 #MON"
-	line "can be carried."
-
-	para "People who raise"
-	line "and make #MON"
-	cont "fight are called"
-	cont "#MON trainers."
 	prompt
 
 _ViridianSchoolNotebookText2::
-	text "Second page..."
+	text "Deuxième page..."
 
-	para "A healthy #MON"
-	line "may be hard to"
-	cont "catch, so weaken"
-	cont "it first!"
+	para "Un #MON"
+	line "sauvage et en"
+	cont "pleine forme est"
+	cont "difficile à"
+	cont "capturer, alors"
+	cont "affaiblissez-le!"
 
-	para "Poison, burns and"
-	line "other damage are"
-	cont "effective!"
+	para "Le poison, la"
+	line "brûlure et les"
+	cont "autres types de"
+	cont "dégâts sont aussi"
+	cont "efficaces!"
 	prompt
 
 _ViridianSchoolNotebookText3::
-	text "Third page..."
+	text "Troisième page..."
 
-	para "#MON trainers"
-	line "seek others to"
-	cont "engage in #MON"
-	cont "fights."
+	para "Le but de chaque"
+	line "dresseur est"
+	cont "d'affronter les"
+	cont "autres dresseurs"
+	cont "dans des combats"
+	cont "de #MON."
 
-	para "Battles are"
-	line "constantly fought"
-	cont "at #MON GYMs."
-	prompt
-
-_ViridianSchoolNotebookText4::
-	text "Fourth page..."
-
-	para "The goal for"
-	line "#MON trainers"
-	cont "is to beat the "
-	cont "top 8 #MON"
-	cont "GYM LEADERs."
-
-	para "Do so to earn the"
-	line "right to face..."
-
-	para "The ELITE FOUR of"
-	line "#MON LEAGUE!"
-	prompt
-
-_EnemiesOnEverySideText::
-	text "Enemies on every"
-	line "side!"
-	done
-
-_WhatGoesAroundComesAroundText::
-	text "What goes around"
-	line "comes around!"
-	done
-
-_FightingDojoText::
-	text "FIGHTING DOJO"
-	done
-
-_IndigoPlateauHQText::
-	text "INDIGO PLATEAU"
-	line "#MON LEAGUE HQ"
-	done
-
-_RedBedroomSNESText::
-	text "<PLAYER> is"
-	line "playing the SNES!"
-	cont "...Okay!"
-	cont "It's time to go!"
-	done
-
-_Route15UpstairsBinocularsText::
-	text "Looked into the"
-	line "binoculars..."
-
-	para "A large, shining"
-	line "bird is flying"
-	cont "toward the sea."
-	done
-
-_AerodactylFossilText::
-	text "AERODACTYL Fossil"
-	line "A primitive and"
-	cont "rare #MON."
-	done
-
-_KabutopsFossilText::
-	text "KABUTOPS Fossil"
-	line "A primitive and"
-	cont "rare #MON."
-	done
-
-_LinkCableHelpText1::
-	text "TRAINER TIPS"
-
-	para "Using a Game Link"
-	line "Cable"
-	prompt
-
-_LinkCableHelpText2::
-	text "Which heading do"
-	line "you want to read?"
-	done
-
-_LinkCableInfoText1::
-	text "When you have"
-	line "linked your GAME"
-	cont "BOY with another"
-	cont "GAME BOY, talk to"
-	cont "the attendant on"
-	cont "the right in any"
-	cont "#MON CENTER."
-	prompt
-
-_LinkCableInfoText2::
-	text "COLOSSEUM lets"
-	line "you play against"
-	cont "a friend."
-	prompt
-
-_LinkCableInfoText3::
-	text "TRADE CENTER is"
-	line "used for trading"
+	para "Les combats se"
+	line "tiennent en"
+	cont "permanence dans"
+	cont "les ARENES"
 	cont "#MON."
 	prompt
 
+_ViridianSchoolNotebookText4::
+	text "Quatrième page..."
+
+	para "Le rêve de chaque"
+	line "dresseur est de"
+	cont "vaincre les 8"
+	cont "CHAMPIONS des"
+	cont "différentes"
+	cont "ARENES #MON."
+
+	para "Ces victoires"
+	line "donnent le droit"
+	cont "d'affronter..."
+
+	para "Le CONSEIL des 4"
+	line "de la LIGUE"
+	cont "#MON!"
+	prompt
+
+_EnemiesOnEverySideText::
+	text "La victoire..."
+	line "C'est bien!"
+	done
+
+_WhatGoesAroundComesAroundText::
+	text "La défaite..."
+	line "C'est mal!"
+	done
+
+_FightingDojoText::
+	text "DOJO"
+	done
+
+_IndigoPlateauHQText::
+	text "PLATEAU INDIGO"
+	line "Quartier général"
+	cont "de la LIGUE"
+	cont "#MON"
+	done
+
+_RedBedroomSNESText::
+	text "<PLAYER> joue à la"
+	line "Super Nintendo!"
+	cont "...Bon!"
+	cont "On y va, non?"
+	done
+
+_Route15UpstairsBinocularsText::
+	text "Vous regardez"
+	line "dans les"
+	cont "jumelles..."
+
+	para "Un grand et bel"
+	line "oiseau vole vers"
+	cont "la mer."
+	done
+
+_AerodactylFossilText::
+	text "Le fossile du"
+	line "PTERA est un"
+	cont "#MON rare"
+	cont "et ancien."
+	done
+
+_KabutopsFossilText::
+	text "Le fossile du"
+	line "KABUTOPS est un"
+	cont "#MON rare"
+	cont "et ancien."
+	done
+
+_LinkCableHelpText1::
+	text "ASTUCE"
+
+	para "Le Câble Link"
+	prompt
+
+_LinkCableHelpText2::
+	text "Quel chapitre"
+	line "voulez-vous lire?"
+	done
+
+_LinkCableInfoText1::
+	text "Après avoir"
+	line "connecté deux"
+	cont "GAME BOY, parlez"
+	cont "à l'hôtesse à"
+	cont "droite dans tout"
+	cont "CENTRE #MON."
+	prompt
+
+_LinkCableInfoText2::
+	text "Le COLISEE permet"
+	line "d'affronter un"
+	cont "ami."
+	prompt
+
+_LinkCableInfoText3::
+	text "Le CENTRE TROC"
+	line "permet d'échanger"
+	cont "vos #MON."
+	prompt
+
 _ViridianSchoolBlackboardText1::
-	text "The blackboard"
-	line "describes #MON"
-	cont "STATUS changes"
-	cont "during battles."
+	text "Le tableau décrit"
+	line "les changements"
+	cont "de STATUT des"
+	cont "#MON pendant"
+	cont "un combat."
 	prompt
 
 _ViridianSchoolBlackboardText2::
-	text "Which heading do"
-	line "you want to read?"
+	text "Quel chapitre"
+	line "voulez-vous lire?"
 	done
 
 _ViridianBlackboardSleepText::
-	text "A #MON can't"
-	line "attack if it's"
-	cont "asleep!"
+	text "Un #MON ne"
+	line "peut attaquer"
+	cont "s'il est endormi!"
 
-	para "#MON will stay"
-	line "asleep even after"
-	cont "battles."
+	para "Un #MON reste"
+	line "endormi même"
+	cont "après un combat."
 
-	para "Use AWAKENING to"
-	line "wake them up!"
+	para "Un REVEIL peut"
+	line "le réveiller!"
 	prompt
 
 _ViridianBlackboardPoisonText::
-	text "When poisoned, a"
-	line "#MON's health"
-	cont "steadily drops."
+	text "Un #MON"
+	line "empoisonné voit"
+	cont "son énergie se"
+	cont "vider doucement."
 
-	para "Poison lingers"
-	line "after battles."
+	para "Le poison ne"
+	line "disparaît pas"
+	cont "après un combat."
 
-	para "Use an ANTIDOTE"
-	line "to cure poison!"
+	para "L'ANTIDOTE soigne"
+	line "le poison!"
 	prompt
 
 _ViridianBlackboardPrlzText::
-	text "Paralysis could"
-	line "make #MON"
-	cont "moves misfire!"
+	text "La paralysie peut"
+	line "annuler certaines"
+	cont "attaques!"
 
-	para "Paralysis remains"
-	line "after battles."
+	para "La paralysie ne"
+	line "disparaît pas"
+	cont "après un combat."
 
-	para "Use PARLYZ HEAL"
-	line "for treatment!"
+	para "L'ANTI-PARA"
+	line "soigne toute"
+	cont "paralysie!"
 	prompt
 
 _ViridianBlackboardBurnText::
-	text "A burn reduces"
-	line "power and speed."
-	cont "It also causes"
-	cont "ongoing damage."
+	text "La BRULURE réduit"
+	line "la puissance et"
+	cont "la vitesse. Elle"
+	cont "inflige aussi des"
+	cont "dégâts continus."
 
-	para "Burns remain"
-	line "after battles."
+	para "La brûlure ne"
+	line "disparaît pas"
+	cont "après un combat."
 
-	para "Use BURN HEAL to"
-	line "cure a burn!"
+	para "L'ANTI-BRULE"
+	line "soigne les grands"
+	cont "brûlés!"
 	prompt
 
 _ViridianBlackboardFrozenText::
-	text "If frozen, a"
-	line "#MON becomes"
-	cont "totally immobile!"
+	text "Un #MON"
+	line "prisonnier des"
+	cont "glaces reste"
+	cont "immobile!"
 
-	para "It stays frozen"
-	line "even after the"
-	cont "battle ends."
+	para "Il reste gelé"
+	line "même après la"
+	cont "fin du combat."
 
-	para "Use ICE HEAL to"
-	line "thaw out #MON!"
+	para "Un ANTIGEL peut"
+	line "réchauffer un"
+	cont "#MON!"
 	prompt
 
 _VermilionGymTrashText::
-	text "Nope, there's"
-	line "only trash here."
+	text "Mmmm!"
+	line "Un joli tas"
+	cont "d'ordures...miam!"
 	done
 
 _VermilionGymTrashSuccessText1::
-	text "Hey! There's a"
-	line "switch under the"
-	cont "trash!"
-	cont "Turn it on!"
+	text "Oh! Un bouton"
+	line "dans la poubelle!"
+	cont "Dingue!"
 
-	para "The 1st electric"
-	line "lock opened!@"
-	text_end
+	para "Le premier"
+	line "verrouillage est"
+	cont "levé!@@"
 
 _VermilionGymTrashSuccessText2::
-	text "Hey! There's"
-	line "another switch"
-	cont "under the trash!"
-	cont "Turn it on!"
+	text "Hé! Un autre"
+	line "bouton dans la"
+	cont "poubelle! Délire!"
+	cont "On appuie!"
 	prompt
 
 _VermilionGymTrashSuccessText3::
-	text "The 2nd electric"
-	line "lock opened!"
+	text "Le deuxième"
+	line "verrouillage est"
+	cont "levé!"
 
-	para "The motorized door"
-	line "opened!@"
+	para "La porte s'ouvre!@"
 	text_end
 
 _VermilionGymTrashFailText::
-	text "Nope! There's"
-	line "only trash here."
-	cont "Hey! The electric"
-	cont "locks were reset!@"
+	text "Une poubelle bien"
+	line "dégueulasse!"
+	cont "Oups... Les"
+	cont "verrouillages"
+	cont "sont en place!@"
 	text_end
 
 _FoundHiddenItemText::
-	text "<PLAYER> found"
+	text "<PLAYER> trouve:"
 	line "@"
 	text_ram wcd6d
 	text "!@"
 	text_end
 
 _HiddenItemBagFullText::
-	text "But, <PLAYER> has"
-	line "no more room for"
-	cont "other items!"
+	text "Zut! Plus de"
+	line "place dans"
+	cont "l'inventaire!"
 	done
 
 _FoundHiddenCoinsText::
-	text "<PLAYER> found"
+	text "<PLAYER> trouve"
 	line "@"
 	text_bcd hCoins, 2 | LEADING_ZEROES | LEFT_ALIGN
-	text " coins!@"
+	text " jetons!@"
 	text_end
 
 _FoundHiddenCoins2Text::
-	text "<PLAYER> found"
+	text "<PLAYER> trouve"
 	line "@"
 	text_bcd hCoins, 2 | LEADING_ZEROES | LEFT_ALIGN
-	text " coins!@"
+	text " jetons!@"
 	text_end
 
 _DroppedHiddenCoinsText::
-	text_start
-	para "Oops! Dropped"
-	line "some coins!"
+	text ""
+	para "Oups! Des jetons"
+	line "sont tombés!"
 	done
 
 _IndigoPlateauStatuesText1::
-	text "INDIGO PLATEAU"
+	text "PLATEAU INDIGO"
 	prompt
 
 _IndigoPlateauStatuesText2::
-	text "The ultimate goal"
-	line "of trainers!"
-	cont "#MON LEAGUE HQ"
+	text "Le rêve de tout"
+	line "dresseur!"
+	cont "Quartier général"
+	cont "de la LIGUE"
+	cont "#MON."
 	done
 
 _IndigoPlateauStatuesText3::
-	text "The highest"
-	line "#MON authority"
-	cont "#MON LEAGUE HQ"
+	text "La plus haute"
+	line "instance #MON."
+	cont "Quartier général"
+	cont "de la LIGUE"
+	cont "#MON."
 	done
 
 _PokemonBooksText::
-	text "Crammed full of"
-	line "#MON books!"
+	text "Des bouquins sur"
+	line "les #MON!"
 	done
 
 _DiglettSculptureText::
-	text "It's a sculpture"
-	line "of DIGLETT."
+	text "Une sculpture de"
+	line "TAUPIQUEUR."
 	done
 
 _ElevatorText::
-	text "This is an"
-	line "elevator."
+	text "Un ascenseur."
 	done
 
 _TownMapText::
-	text "A TOWN MAP.@"
+	text "Une CARTE.@"
 	text_end
 
 _PokemonStuffText::
-	text "Wow! Tons of"
-	line "#MON stuff!"
+	text "Cool! Plein de"
+	line "machins sur les"
+	cont "#MON!"
 	done
 
 _OutOfSafariBallsText::
-	text "PA: Ding-dong!"
+	text "Haut-parleur: Hé!"
 
-	para "You are out of"
-	line "SAFARI BALLs!"
-	prompt
+	para "Vous n'avez plus"
+	line "de SAFARI BALL!"
+	done
 
 _WildRanText::
-	text "Wild @"
 	text_ram wEnemyMonNick
-	text_start
-	line "ran!"
+	text ""
+	line "sauvage s'enfuit!"
 	prompt
 
 _EnemyRanText::
-	text "Enemy @"
+	text "Le @"
 	text_ram wEnemyMonNick
-	text_start
-	line "ran!"
+	text ""
+	line "ennemi s'enfuit!"
 	prompt
 
 _HurtByPoisonText::
-	text "<USER>'s"
-	line "hurt by poison!"
-	prompt
+	;text "<USER>"
+	;line "souffre du"
+	;cont "poison!"
+	text " "
+	done
 
 _HurtByBurnText::
-	text "<USER>'s"
-	line "hurt by the burn!"
-	prompt
+	;text "<USER>"
+	;line "brûle!"
+	text " "
+	done
 
 _HurtByLeechSeedText::
-	text "LEECH SEED saps"
-	line "<USER>!"
-	prompt
+	text "<USER>"
+	line "perd son énergie!"
+	done
 
 _EnemyMonFaintedText::
-	text "Enemy @"
+	text "Le @"
 	text_ram wEnemyMonNick
-	text_start
-	line "fainted!"
-	prompt
+	text ""
+	line "ennemi est K.O.!"
+	done
 
 _MoneyForWinningText::
-	text "<PLAYER> got ¥@"
+	text "<PLAYER> gagne"
+	line "@"
 	text_bcd wAmountMoneyWon, 3 | LEADING_ZEROES | LEFT_ALIGN
-	text_start
-	line "for winning!"
-	prompt
+	text "¥!"
+	done
 
 _TrainerDefeatedText::
-	text "<PLAYER> defeated"
+	text "<PLAYER> a vaincu"
 	line "@"
 	text_ram wTrainerName
 	text "!"
-	prompt
+	done
 
 _PlayerMonFaintedText::
 	text_ram wBattleMonNick
-	text_start
-	line "fainted!"
+	text ""
+	line "est K.O.!"
 	prompt
 
 _UseNextMonText::
-	text "Use next #MON?"
+	text "Appeler un autre"
+	line "#MON?"
 	done
 
 _Rival1WinText::
-	text "<RIVAL>: Yeah! Am"
-	line "I great or what?"
+	text "<RIVAL>: Ouaiiis!"
+	line "J'suis trop bon,"
+	cont "ou bien?"
 	prompt
 
 _PlayerBlackedOutText2::
-	text "<PLAYER> is out of"
-	line "useable #MON!"
+	text "<PLAYER> n'a plus"
+	line "de #MON!"
 
-	para "<PLAYER> blacked"
-	line "out!"
+	para "<PLAYER> est"
+	line "hors-jeu!"
 	prompt
 
 _LinkBattleLostText::
-	text "<PLAYER> lost to"
-	line "@"
 	text_ram wTrainerName
-	text "!"
+	text " a"
+	line "vaincu <PLAYER>!"
 	prompt
 
 _TrainerAboutToUseText::
-	text_ram wTrainerName
-	text " is"
-	line "about to use"
-	cont"@"
+	text "@"
 	text_ram wEnemyMonNick
-	text "!"
-
-	para "Will <PLAYER>"
-	line "change #MON?"
+	text " arrive"
+	line "changer #MON?"
 	done
 
-_TrainerSentOutText::
-	text_ram wTrainerName
-	text " sent"
-	line "out @"
+_TrainerSentOutText:: ;text disable
+	;text_ram wTrainerName
+	;line "fait appel à... "
+	;cont "@"
 	text_ram wEnemyMonNick
-	text "!"
+	text " !"
 	done
 
 _NoWillText::
-	text "There's no will"
-	line "to fight!"
-	prompt
+	text "Il ne veut pas"
+	line "combattre!"
+	done
 
 _CantEscapeText::
-	text "Can't escape!"
-	prompt
+	text "Fuite impossible!"
+	done
 
 _NoRunningText::
-	text "No! There's no"
-	line "running from a"
-	cont "trainer battle!"
-	prompt
+	text "On ne peut s'en-"
+	line "fuir d'un combat"
+	cont "de dresseurs!"
+	done
 
 _GotAwayText::
-	text "Got away safely!"
-	prompt
+	text "Vous prenez la"
+	line "fuite!"
+	done
 
 _ItemsCantBeUsedHereText::
-	text "Items can't be"
-	line "used here."
-	prompt
+	text "Les objets sont"
+	line "inutilisables."
+	done
 
 _AlreadyOutText::
 	text_ram wBattleMonNick
-	text " is"
-	line "already out!"
-	prompt
+	text " est"
+	line "déjà au combat!"
+	done
 
 _MoveNoPPText::
-	text "No PP left for"
-	line "this move!"
-	prompt
+	text "Plus de Points de"
+	line "Pouvoir!"
+	done
 
 _MoveDisabledText::
-	text "The move is"
-	line "disabled!"
-	prompt
+	text "Cette attaque est"
+	line "annulée!"
+	done
 
 _NoMovesLeftText::
 	text_ram wBattleMonNick
-	text " has no"
-	line "moves left!"
+	text " n'a"
+	line "plus d'attaques!"
 	done
 
 _MultiHitText::
-	text "Hit the enemy"
-	line "@"
-	text_decimal wPlayerNumHits, 1, 1
-	text " times!"
-	prompt
+	text "L'ennemi est"
+	line "touché @"
+	text_decimal wPlayerNumHits,1,1
+	text " fois!"
+	done
 
 _ScaredText::
 	text_ram wBattleMonNick
-	text " is too"
-	line "scared to move!"
-	prompt
+	text " a peur"
+	line "de bouger!"
+	done
 
 _GetOutText::
-	text "GHOST: Get out..."
-	line "Get out..."
+	text "SPECTRE: Va-t'en..."
+	line "Dehors..."
 	prompt
 
 _FastAsleepText::
-	text "<USER>"
-	line "is fast asleep!"
-	prompt
+	;text "<USER>"
+	;line "fait un somme!"
+	text " "
+	done
 
 _WokeUpText::
 	text "<USER>"
-	line "woke up!"
-	prompt
+	line "se réveille!"
+	done
 
 _IsFrozenText::
 	text "<USER>"
-	line "is frozen solid!"
-	prompt
+	line "est congelé!"
+	done
 
 _FullyParalyzedText::
-	text "<USER>'s"
-	line "fully paralyzed!"
-	prompt
+	text "<USER>"
+	line "est paralysé!"
+	done
 
 _FlinchedText::
 	text "<USER>"
-	line "flinched!"
-	prompt
+	line "a la trouille!"
+	done
 
 _MustRechargeText::
 	text "<USER>"
-	line "must recharge!"
-	prompt
+	line "est à plat!"
+	done
 
 _DisabledNoMoreText::
-	text "<USER>'s"
-	line "disabled no more!"
-	prompt
+	text "<USER>"
+	line "peut attaquer!"
+	done
 
 _IsConfusedText::
 	text "<USER>"
-	line "is confused!"
-	prompt
+	line "devient dingue..."
+	done
 
 _HurtItselfText::
-	text "It hurt itself in"
-	line "its confusion!"
-	prompt
+	text "Sa folie lui in-"
+	line "flige des dégats!"
+	done
 
 _ConfusedNoMoreText::
-	text "<USER>'s"
-	line "confused no more!"
-	prompt
+	text "<USER>"
+	line "se sent mieux!"
+	done
 
 _SavingEnergyText::
 	text "<USER>"
-	line "is saving energy!"
-	prompt
+	line "se concentre!"
+	done
 
 _UnleashedEnergyText::
 	text "<USER>"
-	line "unleashed energy!"
-	prompt
+	line "envoie la sauce!"
+	done
 
 _ThrashingAboutText::
-	text "<USER>'s"
-	line "thrashing about!"
+	text "<USER>"
+	line "cogne à fond!"
 	done
 
 _AttackContinuesText::
-	text "<USER>'s"
-	line "attack continues!"
+	text "<USER>"
+	line "attaque encore!"
 	done
 
 _CantMoveText::
 	text "<USER>"
-	line "can't move!"
-	prompt
+	line "est immobilisé!"
+	done
 
 _MoveIsDisabledText::
-	text "<USER>'s"
-	line "@"
 	text_ram wcd6d
-	text " is"
-	cont "disabled!"
-	prompt
+	text " de"
+	line "<USER>"
+	cont "a disparu!"
+	done
 
 _MonName1Text::
-	text "<USER>@"
+	text "@"
 	text_end
 
 _Used1Text::
-	text_start
-	line "used @"
+	text "@"
 	text_end
 
 _Used2Text::
-	text_start
-	line "used @"
+	text "@"
 	text_end
 
 _InsteadText::
-	text "instead,"
-	cont "@"
+	text "@"
 	text_end
 
 _CF4BText::
@@ -1099,194 +1149,198 @@ _CF4BText::
 	text "@"
 
 _ExclamationPoint1Text::
-	text "!"
+	text ""
 	done
 
 _ExclamationPoint2Text::
-	text "!"
+	text ""
 	done
 
 _ExclamationPoint3Text::
-	text "!"
+	text ""
 	done
 
 _ExclamationPoint4Text::
-	text "!"
+	text ""
 	done
 
 _ExclamationPoint5Text::
-	text "!"
+	text ""
 	done
 
 _AttackMissedText::
-	text "<USER>'s"
-	line "attack missed!"
-	prompt
+	;text "L'attaque de"
+	;line "<USER>"
+	;cont "a échoué!"
+	text " "
+	done
 
 _KeptGoingAndCrashedText::
 	text "<USER>"
-	line "kept going and"
-	cont "crashed!"
-	prompt
+	line "tombe par terre!"
+	done
 
 _UnaffectedText::
-	text "<TARGET>'s"
-	line "unaffected!"
-	prompt
+	line "Rien senti!"
+	done
 
 _DoesntAffectMonText::
-	text "It doesn't affect"
-	line "<TARGET>!"
-	prompt
+	text "Pas d'effet"
+	done
 
 _CriticalHitText::
-	text "Critical hit!"
-	prompt
+	;text "Coup critique!"
+	text " "
+	done
 
 _OHKOText::
-	text "One-hit KO!"
-	prompt
+	;text "Super patate!"
+	text " "
+	done
 
 _LoafingAroundText::
 	text_ram wBattleMonNick
-	text " is"
-	line "loafing around."
-	prompt
+	text ""
+	line "se balade..."
+	done
 
 _BeganToNapText::
 	text_ram wBattleMonNick
-	text " began"
-	line "to nap!"
-	prompt
+	text ""
+	line "fait une sieste!"
+	done
 
 _WontObeyText::
 	text_ram wBattleMonNick
-	text " won't"
-	line "obey!"
-	prompt
+	text ""
+	line "n'obéit pas!"
+	done
 
 _TurnedAwayText::
 	text_ram wBattleMonNick
-	text " turned"
-	line "away!"
+	text ""
+	line "s'en va!"
 	prompt
 
 _IgnoredOrdersText::
 	text_ram wBattleMonNick
-	text_start
-	line "ignored orders!"
-	prompt
+	text ""
+	line "ignore les ordres!"
+	done
 
 _SubstituteTookDamageText::
-	text "The SUBSTITUTE"
-	line "took damage for"
+	text "Le CLONE a pris"
+	line "les dégâts pour"
 	cont "<TARGET>!"
-	prompt
+	done
 
 _SubstituteBrokeText::
-	text "<TARGET>'s"
-	line "SUBSTITUTE broke!"
+	text "Le CLONE de"
+	line "<TARGET>"
+	cont "est détruit!"
 	prompt
 
 _BuildingRageText::
-	text "<USER>'s"
-	line "RAGE is building!"
-	prompt
+	text "La FRENESIE de"
+	line "<USER>"
+	cont "s'intensifie!"
+	done
 
 _MirrorMoveFailedText::
-	text "The MIRROR MOVE"
-	next "failed!"
-	prompt
+	text "La MIMIQUE a"
+	next "échoué!"
+	done
 
 _HitXTimesText::
-	text "Hit @"
+	text "Touché @"
 	text_decimal wEnemyNumHits, 1, 1
-	text " times!"
-	prompt
+	text " fois!"
+	done
 
 _GainedText::
 	text_ram wcd6d
-	text " gained"
-	line "@"
-	text_end
+	text " gagne"
+	line "@@"
+	done
 
 _WithExpAllText::
-	text "with EXP.ALL,"
-	cont "@"
+	text "avec MULTI EXP,"
+	cont "@@"
 	text_end
 
 _BoostedText::
-	text "a boosted"
-	cont "@"
+	text "un bonus de"
+	cont "@@"
 	text_end
 
 _ExpPointsText::
 	text_decimal wExpAmountGained, 2, 4
-	text " EXP. Points!"
-	prompt
+	text " points d'EXP!"
+	done
 
 _GrewLevelText::
 	text_ram wcd6d
-	text " grew"
-	line "to level @"
+	text " monte"
+	line "au niveau @"
 	text_decimal wCurEnemyLVL, 1, 3
-	text "!@"
+	text "!@@"
 	text_end
 
 _WildMonAppearedText::
-	text "Wild @"
+	text "Un @"
 	text_ram wEnemyMonNick
-	text_start
-	line "appeared!"
-	prompt
+	text ""
+	line "sauvage apparaît!"
+	done
 
 _HookedMonAttackedText::
-	text "The hooked"
-	line "@"
+	text "Le @"
 	text_ram wEnemyMonNick
-	text_start
-	cont "attacked!"
-	prompt
+	text ""
+	line "pêché attaque!"
+	done
 
 _EnemyAppearedText::
+	text "Un @"
 	text_ram wEnemyMonNick
-	text_start
-	line "appeared!"
-	prompt
+	text ""
+	line "apparaît!"
+	done
 
 _TrainerWantsToFightText::
 	text_ram wTrainerName
-	text " wants"
-	line "to fight!"
-	prompt
+	text " veut"
+	line "se battre !"
+	done
 
 _UnveiledGhostText::
-	text "SILPH SCOPE"
-	line "unveiled the"
-	cont "GHOST's identity!"
+	text "Le SCOPE SYLPHE"
+	line "révèle l'identité"
+	cont "du SPECTRE!"
 	prompt
 
 _GhostCantBeIDdText::
-	text "Darn! The GHOST"
-	line "can't be ID'd!"
+	text "Fichtre! Le"
+	line "SPECTRE ne peut"
+	cont "être identifié!"
 	prompt
 
-_GoText::
-	text "Go! @"
-	text_end
+_GoText:: ;text disable
+	text "En avant !"
+	line "@@"
+	done
 
 _DoItText::
-	text "Do it! @"
-	text_end
+	text "Attaque,"
+	line "@@"
 
 _GetmText::
-	text "Get'm! @"
-	text_end
+	text "A toi,"
+	line "@@"
 
 _EnemysWeakText::
-	text "The enemy's weak!"
-	line "Get'm! @"
-	text_end
+	text "Il est à toi,"
+	line "@@"
 
 _PlayerMon1Text::
 	text_ram wBattleMonNick
@@ -1295,482 +1349,473 @@ _PlayerMon1Text::
 
 _PlayerMon2Text::
 	text_ram wBattleMonNick
-	text " @"
+	text "!@@"
 	text_end
 
 _EnoughText::
-	text "enough!@"
+	text "!@@"
 	text_end
 
 _OKExclamationText::
-	text "OK!@"
+	text "!@@"
 	text_end
 
 _GoodText::
-	text "good!@"
+	text "!@@"
 	text_end
 
 _ComeBackText::
-	text_start
-	line "Come back!"
+	text ""
+	line "Reviens!@@"
 	done
 
 _SuperEffectiveText::
-	text "It's super"
-	line "effective!"
-	prompt
+	text "Très efficace!"
+	done
 
 _NotVeryEffectiveText::
-	text "It's not very"
-	line "effective..."
-	prompt
+	text "Pas efficace"
+	done
 
 _SafariZoneEatingText::
-	text "Wild @"
+	text "Le @"
 	text_ram wEnemyMonNick
-	text_start
-	line "is eating!"
-	prompt
+	text ""
+	line "sauvage mange!"
+	done
 
 _SafariZoneAngryText::
-	text "Wild @"
+	text "Le @"
 	text_ram wEnemyMonNick
-	text_start
-	line "is angry!"
-	prompt
+	text ""
+	line "sauvage se fâche!"
+	done
 
 ; money related
 _PickUpPayDayMoneyText::
-	text "<PLAYER> picked up"
+	text "<PLAYER> ramasse:"
 	line "¥@"
 	text_bcd wTotalPayDayMoney, 3 | LEADING_ZEROES | LEFT_ALIGN
 	text "!"
 	prompt
 
 _ClearSaveDataText::
-	text "Clear all saved"
-	line "data?"
+	text "Effacer toutes"
+	line "les données?"
 	done
 
 _WhichFloorText::
-	text "Which floor do"
-	line "you want? "
+	text "Quel étage?"
 	done
 
 _PartyMenuNormalText::
-	text "Choose a #MON."
+	text "Sélectionnez un"
+	line "#MON."
 	done
 
 _PartyMenuItemUseText::
-	text "Use item on which"
-	line "#MON?"
+	text "Sur quel #MON?"
 	done
 
 _PartyMenuBattleText::
-	text "Bring out which"
-	line "#MON?"
+	text "Faire combattre"
+	line "quel #MON?"
 	done
 
 _PartyMenuUseTMText::
-	text "Use TM on which"
+	text "Capsule sur quel"
 	line "#MON?"
 	done
 
 _PartyMenuSwapMonText::
-	text "Move #MON"
-	line "where?"
+	text "Nouvelle position"
+	line "du #MON..."
 	done
 
 _PotionText::
 	text_ram wcd6d
-	text_start
-	line "recovered by @"
+	text ""
+	line "gagne @"
 	text_decimal wHPBarHPDifference, 2, 3
-	text "!"
+	text " PV!"
 	done
 
 _AntidoteText::
 	text_ram wcd6d
-	text " was"
-	line "cured of poison!"
+	text " est"
+	line "guéri du poison!"
 	done
 
 _ParlyzHealText::
 	text_ram wcd6d
-	text "'s"
-	line "rid of paralysis!"
+	text ""
+	line "peut bouger!"
 	done
 
 _BurnHealText::
 	text_ram wcd6d
-	text "'s"
-	line "burn was healed!"
+	text ""
+	line "ne brûle plus!"
 	done
 
 _IceHealText::
 	text_ram wcd6d
-	text " was"
-	line "defrosted!"
+	text ""
+	line "est dégelé!"
 	done
 
 _AwakeningText::
 	text_ram wcd6d
-	text_start
-	line "woke up!"
+	text ""
+	line "se réveille!"
 	done
 
 _FullHealText::
 	text_ram wcd6d
-	text "'s"
-	line "health returned!"
+	text ""
+	line "est soigné!"
 	done
 
 _ReviveText::
 	text_ram wcd6d
-	text_start
-	line "is revitalized!"
+	text ""
+	line "revient à lui!"
 	done
 
 _RareCandyText::
 	text_ram wcd6d
-	text " grew"
-	line "to level @"
+	text " monte"
+	line "au niveau @"
 	text_decimal wCurEnemyLVL, 1, 3
-	text "!@"
-	text_end
+	text "!@@"
 
 _TurnedOnPC1Text::
-	text "<PLAYER> turned on"
-	line "the PC."
-	prompt
+	text "<PLAYER> allume"
+	line "le PC."
+	done
 
 _AccessedBillsPCText::
-	text "Accessed BILL's"
-	line "PC."
-
-	para "Accessed #MON"
-	line "Storage System."
-	prompt
+	text "Accès stockage"
+	line "#MON."
+	done
 
 _AccessedSomeonesPCText::
-	text "Accessed someone's"
-	line "PC."
-
-	para "Accessed #MON"
-	line "Storage System."
-	prompt
+	text "Accès stockage"
+	line "#MON."
+	done
 
 _AccessedMyPCText::
-	text "Accessed my PC."
-
-	para "Accessed Item"
-	line "Storage System."
-	prompt
+	text "Accès stockage"
+	line "objets."
+	done
 
 _TurnedOnPC2Text::
-	text "<PLAYER> turned on"
-	line "the PC."
-	prompt
+	;text "<PLAYER> allume"
+	;line "le PC."
+	done
 
 _WhatDoYouWantText::
-	text "What do you want"
-	line "to do?"
+	text "Exécuter quelle"
+	line "application?"
 	done
 
 _WhatToDepositText::
-	text "What do you want"
-	line "to deposit?"
+	text "Que désirez-vous"
+	line "stocker?"
 	done
 
 _DepositHowManyText::
-	text "How many?"
+	text "Combien?"
 	done
 
 _ItemWasStoredText::
+	text "@"
 	text_ram wcd6d
-	text " was"
-	line "stored via PC."
-	prompt
+	text "stocké."
+	done
 
 _NothingToDepositText::
-	text "You have nothing"
-	line "to deposit."
+	text "Vous n'avez rien"
+	line "à stocker."
 	prompt
 
 _NoRoomToStoreText::
-	text "No room left to"
-	line "store items."
+	text "Plus de place"
+	line "pour stocker."
 	prompt
 
 _WhatToWithdrawText::
-	text "What do you want"
-	line "to withdraw?"
+	text "Que voulez-vous"
+	line "retirer?"
 	done
 
 _WithdrawHowManyText::
-	text "How many?"
+	text "Combien?"
 	done
 
 _WithdrewItemText::
-	text "Withdrew"
+	text "Retrait de:"
 	line "@"
 	text_ram wcd6d
 	text "."
-	prompt
+	done
 
 _NothingStoredText::
-	text "There is nothing"
-	line "stored."
+	text "Rien n'est"
+	line "stocké."
 	prompt
 
 _CantCarryMoreText::
-	text "You can't carry"
-	line "any more items."
+	text "Votre inventaire"
+	line "est plein."
 	prompt
 
 _WhatToTossText::
-	text "What do you want"
-	line "to toss away?"
+	text "Que désirez-vous"
+	line "jeter?"
 	done
 
 _TossHowManyText::
-	text "How many?"
+	text "Combien?"
 	done
 
 _AccessedHoFPCText::
-	text "Accessed #MON"
-	line "LEAGUE's site."
+	text "Connexion au site"
+	line "de la LIGUE"
+	cont "#MON."
 
-	para "Accessed the HALL"
-	line "OF FAME List."
-	prompt
+	para "Accès à la liste"
+	line "des CELEBRITES."
+	done
 
 _SwitchOnText::
-	text "Switch on!"
-	prompt
+	text "Branché!"
+	done
 
 _WhatText::
-	text "What?"
+	text "Que faire?"
 	done
 
 _DepositWhichMonText::
-	text "Deposit which"
+	text "Stocker quel"
 	line "#MON?"
 	done
 
 _MonWasStoredText::
 	text_ram wcf4b
-	text " was"
-	line "stored in Box @"
+	text " stocké"
+	line "dans boite @"
 	text_ram wBoxNumString
 	text "."
-	prompt
+	done
 
 _CantDepositLastMonText::
-	text "You can't deposit"
-	line "the last #MON!"
+	text "Vous ne pouvez"
+	line "stocker votre"
+	cont "dernier #MON!"
 	prompt
 
 _BoxFullText::
-	text "Oops! This Box is"
-	line "full of #MON."
+	text "Oups! Cette boîte"
+	line "est pleine!"
 	prompt
 
 _MonIsTakenOutText::
-	text_ram wcf4b
-	text " is"
-	line "taken out."
-	cont "Got @"
+	text "Retrait de"
+	line "@"
 	text_ram wcf4b
 	text "."
-	prompt
+	done
 
 _NoMonText::
-	text "What? There are"
-	line "no #MON here!"
+	text "Hein? Il n'y a"
+	line "aucun #MON!"
 	prompt
 
 _CantTakeMonText::
-	text "You can't take"
-	line "any more #MON."
+	text "Vous ne pouvez"
+	line "retirer un"
+	cont "#MON."
 
-	para "Deposit #MON"
-	line "first."
+	para "Stockez d'abord"
+	line "un #MON."
 	prompt
 
 _ReleaseWhichMonText::
-	text "Release which"
+	text "Relâcher quel"
 	line "#MON?"
 	done
 
 _OnceReleasedText::
-	text "Once released,"
-	line "@"
 	text_ram wcf4b
-	text " is"
-	cont "gone forever. OK?"
+	text " sera"
+	line "à jamais perdu?"
 	done
 
 _MonWasReleasedText::
+	text "Adieu @"
 	text_ram wcf4b
-	text " was"
-	line "released outside."
-	cont "Bye @"
-
-_CF4BExclamationText::
-	text_ram wcf4b
-	text "!"
+	text "."
 	prompt
 
 _RequireCoinCaseText::
-	text "A COIN CASE is"
-	line "required!@"
+	text "Vous n'avez pas"
+	line "de BOITE JETON!@"
 	text_end
 
+
 _ExchangeCoinsForPrizesText::
-	text "We exchange your"
-	line "coins for prizes."
+	text "Nous échangeons"
+	line "des prix contre"
+	cont "des jetons."
 	prompt
 
 _WhichPrizeText::
-	text "Which prize do"
-	line "you want?"
+	text "Quel prix"
+	line "désirez-vous?"
 	done
 
 _HereYouGoText::
-	text "Here you go!@"
+	text "Et voilà!@"
 	text_end
 
 _SoYouWantPrizeText::
-	text "So, you want"
-	line "@"
 	text_ram wcd6d
 	text "?"
 	done
 
 _SorryNeedMoreCoinsText::
-	text "Sorry, you need"
-	line "more coins.@"
+	text "Vous n'avez pas"
+	line "assez de jetons.@"
 	text_end
 
 _OopsYouDontHaveEnoughRoomText::
-	text "Oops! You don't"
-	line "have enough room.@"
+	text "Votre inventaire"
+	line "est plein.@"
 	text_end
 
 _OhFineThenText::
-	text "Oh, fine then.@"
+	text "Bon. Très bien.@"
 	text_end
 
 _GetDexRatedText::
-	text "Want to get your"
-	line "#DEX rated?"
+	text "Voulez-vous faire"
+	line "évaluer votre"
+	cont "#DEX?"
 	done
 
 _ClosedOaksPCText::
-	text "Closed link to"
-	line "PROF.OAK's PC.@"
+	text "PC du PROF. CHEN,"
+	line "Déconnexion...@"
 	text_end
 
 _AccessedOaksPCText::
-	text "Accessed PROF."
-	line "OAK's PC."
+	text "Connexion au PC"
+	line "du PROF. CHEN."
 
-	para "Accessed #DEX"
-	line "Rating System."
+	para "Accès au système"
+	line "d'évaluation du"
+	cont "#DEX."
 	prompt
 
 _WhereWouldYouLikeText::
-	text "Where would you"
-	line "like to go?"
+	text "Où désirez-vous"
+	line "aller?"
 	done
 
 _PleaseWaitText::
-	text "OK, please wait"
-	line "just a moment."
+	text "Un instant,"
+	line "s'il vous plaît."
 	done
 
 _LinkCanceledText::
-	text "The link was"
-	line "canceled."
+	text "La connexion a"
+	line "échoué."
 	done
 
 _OakSpeechText1::
-	text "Hello there!"
-	line "Welcome to the"
-	cont "world of #MON!"
+	text "Bien le bonjour!"
+	line "Bienvenue dans le"
+	cont "monde magique des"
+	cont "#MON!"
 
-	para "My name is OAK!"
-	line "People call me"
-	cont "the #MON PROF!"
+	para "Mon nom est CHEN!"
+	line "Les gens souvent"
+	cont "m'appellent le"
+	cont "PROF #MON!"
 	prompt
 
 _OakSpeechText2A::
-	text "This world is"
-	line "inhabited by"
-	cont "creatures called"
-	cont "#MON!@"
-	text_end
+	text "Ce monde est"
+	line "peuplé de"
+	cont "créatures du nom"
+	cont "de #MON!@@"
 
 _OakSpeechText2B::
-	text_start
+	text ""
 
-	para "For some people,"
-	line "#MON are"
-	cont "pets. Others use"
-	cont "them for fights."
+	para "Pour certains,"
+	line "les #MON sont"
+	cont "des animaux"
+	cont "domestiques, pour"
+	cont "d'autres, ils"
+	cont "sont un moyen de"
+	cont "combattre."
 
-	para "Myself..."
+	para "Pour ma part..."
 
-	para "I study #MON"
-	line "as a profession."
+	para "L'étude des"
+	line "#MON est"
+	cont "ma profession."
 	prompt
 
 _IntroducePlayerText::
-	text "First, what is"
-	line "your name?"
+	text "Tout d'abord,"
+	line "quel est ton nom?"
 	prompt
 
 _IntroduceRivalText::
-	text "This is my grand-"
-	line "son. He's been"
-	cont "your rival since"
-	cont "you were a baby."
+	text "Voici mon petit-"
+	line "fils. Il est ton"
+	cont "rival depuis sa"
+	cont "toute jeunesse."
 
-	para "...Erm, what is"
-	line "his name again?"
+	para "...Heu..."
+	line "C'est quoi donc"
+	cont "son nom déjà?"
 	prompt
 
 _OakSpeechText3::
 	text "<PLAYER>!"
 
-	para "Your very own"
-	line "#MON legend is"
-	cont "about to unfold!"
+	para "Ta quête des"
+	line "#MON est sur"
+	cont "le point de"
+	cont "commencer!"
 
-	para "A world of dreams"
-	line "and adventures"
-	cont "with #MON"
-	cont "awaits! Let's go!"
+	para "Un tout nouveau"
+	line "monde de rêves,"
+	cont "d'aventures et"
+	cont "de #MON"
+	cont "t'attend! Dingue!"
 	done
 
 _DoYouWantToNicknameText::
-	text "Do you want to"
-	line "give a nickname"
-	cont "to @"
+	text "Donner un surnom"
+	line "à @"
 	text_ram wcd6d
 	text "?"
 	done
 
 _YourNameIsText::
-	text "Right! So your"
-	line "name is <PLAYER>!"
+	text "OK! Ton nom est"
+	line "donc <PLAYER>!"
 	prompt
 
 _HisNameIsText::
-	text "That's right! I"
-	line "remember now! His"
-	cont "name is <RIVAL>!"
+	text "Ah oui! Je me"
+	line "souviens! Son nom"
+	cont "est <RIVAL>!"
 	prompt
 
 _WillBeTradedText::
