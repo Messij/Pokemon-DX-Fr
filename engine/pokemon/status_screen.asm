@@ -295,9 +295,9 @@ PrintStat:
 	ret
 
 StatsText:
-	db   "ATTACK"
+	db   "ATTAQUE"
 	next "DEFENSE"
-	next "SPEED"
+	next "VITESSE"
 	next "SPECIAL@"
 
 StatusScreen2:
