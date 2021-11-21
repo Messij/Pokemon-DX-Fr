@@ -2,8 +2,8 @@ ActivatePC::
 	call SaveScreenTilesToBuffer2
 	ld a, SFX_TURN_ON_PC
 	call PlaySound
-	ld hl, TurnedOnPC1Text
-	call PrintText
+	;ld hl, TurnedOnPC1Text ;desactivation text connexion PC
+	;call PrintText
 	call WaitForSoundToFinish
 	ld hl, wFlags_0xcd60
 	set 3, [hl]

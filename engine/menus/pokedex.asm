@@ -360,19 +360,19 @@ DrawPokedexVerticalLine:
 	ret
 
 PokedexSeenText:
-	db "SEEN@"
+	db "VUS@"
 
 PokedexOwnText:
-	db "OWN@"
+	db "PRIS@"
 
 PokedexContentsText:
-	db "CONTENTS@"
+	db "SOMMAIRE@"
 
 PokedexMenuItemsText:
-	db   "DATA"
-	next "CRY"
-	next "AREA"
-	next "QUIT@"
+	db   "INFO"
+	next "CRI "
+	next "ZONE"
+	next "RET@"
 
 ; tests if a pokemon's bit is set in the seen or owned pokemon bit fields
 ; INPUT:

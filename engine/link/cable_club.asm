@@ -291,7 +291,7 @@ CableClub_DoBattleOrTradeAgain:
 	jr CallCurrentTradeCenterFunction
 
 PleaseWaitString:
-	db "PLEASE WAIT!@"
+	db "ATTENDEZ SVP@"
 
 CallCurrentTradeCenterFunction:
 	ld hl, TradeCenterPointerTable
