@@ -19,7 +19,7 @@ ItemNames::
 	db "HYPER POTION@"
 	db "SUPER POTION@"
 	db "POTION@"
-	db "BADGE ROCHE "
+	db "BADGE ROCHE@"
 	db "BADGE CASCADE@"
 	db "BADGE FOUDRE@"
 	db "BADGE PRISME@"
