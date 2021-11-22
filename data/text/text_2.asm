@@ -1172,7 +1172,7 @@ _AttackMissedText::
 	;text "L'attaque de"
 	;line "<USER>"
 	;cont "a échoué!"
-	text " "
+	text "Raté ..."
 	done
 
 _KeptGoingAndCrashedText::
@@ -1185,7 +1185,7 @@ _UnaffectedText::
 	done
 
 _DoesntAffectMonText::
-	text "Pas d'effet"
+	text "Pas d'effet ..."
 	done
 
 _CriticalHitText::

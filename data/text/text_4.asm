@@ -117,11 +117,11 @@ _TryingToLearnText::
 	text_ram wcf4b
 	text "!"
 
-	para "Mais @"
-	text_ram wLearnMoveMonName
-	text ""
-	line "ne peut plus rien"
-	cont "apprendre!"
+	;para "Mais @"
+	;text_ram wLearnMoveMonName
+	;text ""
+	;line "ne peut plus rien"
+	;cont "apprendre!"
 
 	para "Oublier une"
 	line "attaque pour"
