@@ -22,7 +22,7 @@ SetDefaultNamesBeforeTitlescreen::
 	ld [wAudioSavedROMBank], a
 
 DisplayTitleScreen:
-	jp .finishedWaiting ; zap l'écrans titre (title_screen)
+	;jp .finishedWaiting ; zap l'écrans titre (title_screen)
 	call GBPalWhiteOut
 	ld a, $1
 	ldh [hAutoBGTransferEnabled], a
