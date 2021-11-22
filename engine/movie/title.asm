@@ -22,6 +22,7 @@ SetDefaultNamesBeforeTitlescreen::
 	ld [wAudioSavedROMBank], a
 
 DisplayTitleScreen:
+	jp .finishedWaiting ; zap l'écrans titre (title_screen)
 	call GBPalWhiteOut
 	ld a, $1
 	ldh [hAutoBGTransferEnabled], a
@@ -217,6 +218,7 @@ ENDC
 	call PlaySound
 	xor a
 	ld [wUnusedCC5B], a
+	jp .finishedWaiting ; passe directement au main_menu apres l'affichage du logo pokemon et red version
 
 ; Keep scrolling in new mons indefinitely until the user performs input.
 .awaitUserInterruptionLoop
