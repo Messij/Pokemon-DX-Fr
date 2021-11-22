@@ -1,3 +1,6 @@
+VersionText:
+	db "Par Messij v0.4@"
+
 MainMenu:
 ; Check save file
 	call InitOptions
@@ -50,6 +53,11 @@ MainMenu:
 	ld de, NewGameText
 	call PlaceString
 .next2
+;print the game version
+	coord hl, $00, $11
+	ld de, VersionText
+	call PlaceString
+
 	ld hl, wd730
 	res 6, [hl]
 	call UpdateSprites
