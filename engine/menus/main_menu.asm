@@ -14,6 +14,7 @@ MainMenu:
 	predef LoadSAV
 
 .mainMenuLoop
+	jp .pressedA ; zap le main_menu et charge directement la partie
 	ld c, 20
 	call DelayFrames
 	xor a ; LINK_STATE_NONE
