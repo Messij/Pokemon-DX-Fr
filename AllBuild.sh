@@ -1,0 +1,2 @@
+./NoIntroVersionBuild.sh
+./StandardVersionBuild.sh
