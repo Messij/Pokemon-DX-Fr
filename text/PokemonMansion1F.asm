@@ -5,7 +5,7 @@ _Mansion1BattleText2::
 	done
 
 _Mansion1EndBattleText2::
-	text "Aïe!"
+	text "Aie!"
 	prompt
 
 _Mansion1AfterBattleText2::

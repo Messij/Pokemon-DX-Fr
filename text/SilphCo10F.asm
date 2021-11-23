@@ -17,7 +17,7 @@ _SilphCo10BattleText1::
 	done
 
 _SilphCo10EndBattleText1::
-	text "Aïe!"
+	text "Aie!"
 	line "Bobo!"
 	prompt
 

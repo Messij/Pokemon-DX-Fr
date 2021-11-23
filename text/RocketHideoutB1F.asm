@@ -7,7 +7,7 @@ _RocketHideout1BattleText2::
 	done
 
 _RocketHideout1EndBattleText2::
-	text "Aïe!"
+	text "Aie!"
 	line "J'suis battu!"
 	prompt
 

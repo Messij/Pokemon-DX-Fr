@@ -88,7 +88,7 @@ _Route19BattleText6::
 	done
 
 _Route19EndBattleText6::
-	text "Aïe!"
+	text "Aie!"
 	line "T'es pas poète!"
 	prompt
 
